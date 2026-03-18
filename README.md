@@ -1,4 +1,3 @@
-markdown
 # 🚀 CMS Testimonials Platform - NoCountry Simulation
 
 ## 📋 Overview
