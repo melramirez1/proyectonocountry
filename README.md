@@ -16,11 +16,12 @@ Implemented with a **DevSecOps** mindset to ensure scalability, security, and de
 
 ### 💻 Frontend Development
 The frontend is built with **Next.js 15** and **Tailwind CSS**.
+We use **pnpm** as our preferred package manager.
 
 To run it locally:
 1. `cd frontend`
-2. `npm install`
-3. `npm run dev`
+2. `pnpm install`
+3. `pnpm dev`
 4. Open [http://localhost:3000](http://localhost:3000)
 
 ### 🐳 Database & Infrastructure
