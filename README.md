@@ -21,3 +21,17 @@ To run it locally:
 2. `npm install`
 3. `npm run dev`
 4. Open [http://localhost:3000](http://localhost:3000)
+
+### 🐳 Database & Infrastructure (Local)
+The project uses **PostgreSQL 16** managed via Docker Compose to ensure all team members work with the same environment.
+
+**Prerequisites:**
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running.
+
+**Steps to start the DB:**
+1. From the project root, run:
+   ```bash
+   docker compose up -d
+   ```
+2. The database will be available at `localhost:5432`.
+3. Connection details can be found in the `.env.example` file.
