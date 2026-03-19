@@ -44,4 +44,3 @@ docker compose up -d
 - `/infra`: Cloud infrastructure and Docker configuration.
 - `/docs`: Architecture diagrams and Security audit reports.
 - `/scripts`: Python/Bash automation scripts.
-```
