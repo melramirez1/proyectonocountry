@@ -13,3 +13,11 @@ This project is a specialized Content Management System (CMS) designed for manag
 - `/docs`: Technical documentation and Security reports.
 - `/scripts`: Python automation scripts.
 ```
+### 💻 Frontend Development
+The frontend is built with **Next.js 15** and **Tailwind CSS**.
+
+To run it locally:
+1. `cd frontend`
+2. `npm install`
+3. `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000)
