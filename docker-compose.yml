@@ -1,4 +1,7 @@
+version: '3.8'
+
 services:
+  # 🗄️ DATABASE: PostgreSQL instance for data persistence
   db:
     image: postgres:16
     container_name: mkre-db-nocountry
@@ -9,3 +12,38 @@ services:
       - POSTGRES_DB=nocountry_db
     ports:
       - "5432:5432"
+    networks:
+      - app-network
+
+  # ⚙️ BACKEND: API Service (Infrastructure Placeholder)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: mkre-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://admin:secret_password_123@db:5432/nocountry_db
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  # 💻 FRONTEND: Next.js Client Application
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: mkre-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+# 🌐 NETWORKS: Internal bridge for secure service communication
+networks:
+  app-network:
+    driver: bridge
